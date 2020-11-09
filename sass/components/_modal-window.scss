@@ -1,0 +1,51 @@
+.modal-window {
+  position: absolute;
+  /*top: 221px;*/
+  top: 50%;
+  left: 50%;
+  /*transform: translateX(-50%) scale(1);*/
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 528px;
+  height: 581px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  transition-delay: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 40px;
+  text-align: center;
+
+  .close-btn {
+    position: absolute;
+    z-index: 3;
+    left: 490px;
+    top: 8px;
+
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover svg,
+    &:focus svg {
+      fill: $active-color;
+    }
+  }
+  .modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+
+    color: $primary-text-color;
+  }
+}

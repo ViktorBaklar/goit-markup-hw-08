@@ -1,0 +1,153 @@
+.modal-form {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.label-text {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+
+  color: $secondary-text-color;
+  margin-bottom: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  svg {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 12px;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.input {
+  height: 40px;
+  width: 100%;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition-delay: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.01em;
+
+  &:focus + svg,
+  &:active + svg {
+    fill: $active-color;
+  }
+  &:focus,
+  &:active {
+    border-color: $active-color;
+  }
+}
+
+.textarea {
+  resize: none;
+  height: 120px;
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition-delay: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.01em;
+
+  &:placeholder-shown {
+    border-color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:not(:placeholder-shown) {
+    border-color: $active-color;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus,
+  &:active {
+    border-color: $active-color;
+  }
+}
+
+.checkbox-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  .checkbox-modified {
+    position: absolute;
+    margin-left: -16px;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 15px;
+    border: 2px solid;
+    border-color: $primary-text-color;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+
+  .policy {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: $secondary-text-color;
+
+    padding-left: 16px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .checkbox:checked + .checkbox-modified {
+    border: 2px solid;
+    border-color: $active-color;
+    background-color: $active-color;
+    background-image: url(../svg/checkbox-v.svg);
+  }
+
+  .checkbox:focus + .checkbox-modified {
+    box-shadow: 0 0 0 2px $active-color;
+  }
+
+  pre {
+    font-family: inherit;
+  }
+
+  .policy-link {
+    color: $active-color;
+    text-decoration: underline;
+  }
+}
