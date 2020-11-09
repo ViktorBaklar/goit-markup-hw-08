@@ -43,16 +43,32 @@
   width: 40px;
   background-color: transparent;
   border: none;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  .svg {
+
+  /* .icon-menu,
+  .icon-cross {
     fill: #000000;
+  }*/
+
+  .icon-cross {
+    display: none;
   }
-  :hover .svg,
-  :focus .svg {
-    fill: $activ-color;
+
+  &.is-open .icon-close {
+    display: block;
+  }
+
+  &.is-open .iconmenu {
+    display: none;
+  }
+
+  &:hover .icon-menu,
+  &:focus .icon-menu {
+    fill: $active-text-color;
+  }
+
+  &:hover .icon-cross,
+  &:focus .icon-cross {
+    fill: $active-text-color;
   }
   @media screen and (min-width: 768px) {
     display: none;
