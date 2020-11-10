@@ -1,25 +1,30 @@
 .modal-window {
-  position: absolute;
-  z-index: 25;
-  /*top: 221px;*/
-  top: 50%;
-  left: 50%;
-
-  width: 450px;
   padding: 40px;
   text-align: center;
   background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  /*transform: translateX(-50%) scale(1);*/
-  transform: translate(-50%, -50%) scale(1);
-  overflow: hidden;
-  transition-delay: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+  /*
   @media screen and (max-width: 450px) {
     width: 100%;
   }
+*/
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    z-index: 25;
+    /*top: 221px;*/
+    top: 50%;
+    left: 50%;
+
+    width: 450px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    /*transform: translateX(-50%) scale(1);*/
+    transform: translate(-50%, -50%) scale(1);
+    overflow: hidden;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   @media screen and (min-width: 1200px) {
     width: 528px;
     height: 581px;
