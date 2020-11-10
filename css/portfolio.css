@@ -321,6 +321,10 @@ link:hover {
   }
 }
 
+.active-menu {
+  color: #2196f3;
+}
+
 .navigation-link:active,
 .navigation-link:hover,
 .navigation-link:focus {
