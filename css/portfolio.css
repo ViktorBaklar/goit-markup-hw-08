@@ -331,7 +331,7 @@ link:hover {
 }
 
 @media screen and (max-width: 767px) {
-  .address {
+  .header .address {
     display: none;
   }
 }
