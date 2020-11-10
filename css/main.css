@@ -731,7 +731,7 @@ link:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .team-list-item:last-child {
     margin-top: 60px;
   }
