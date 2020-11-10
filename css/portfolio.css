@@ -131,6 +131,9 @@ link:hover {
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  /*@media screen and (max-width: 767px) {
+    text-align: center;
+  }*/
 }
 
 .subtitle_dark-theme {
@@ -139,12 +142,6 @@ link:hover {
 
 .subtitle_light-theme {
   color: #212121;
-}
-
-@media screen and (max-width: 1200px) {
-  .subtitle {
-    text-align: center;
-  }
 }
 
 .header {
