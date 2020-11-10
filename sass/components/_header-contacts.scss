@@ -1,3 +1,9 @@
+.address {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
 .contacts-flexx {
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -15,6 +21,7 @@
   @media screen and (min-width: 1200px) {
     margin-right: 30px;
     display: flex;
+    align-items: center;
   }
 }
 
@@ -29,9 +36,15 @@
   line-height: 1.167;
   letter-spacing: 0.02em;
   color: $secondary-text-color;
-  display: flex;
-  align-items: center;
   @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.167;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
     font-size: 14px;
     line-height: 1.143;
   }
@@ -41,6 +54,31 @@
   margin-right: 10px;
   fill: currentColor;
   fill: $secondary-text-color;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .envelope {
+    width: 14px;
+    height: 10px;
+  }
+  .smartphone {
+    width: 10px;
+    height: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .envelope {
+    width: 16px;
+    height: 12px;
+  }
+  .smartphone {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .contact-link:hover svg,

@@ -37,6 +37,12 @@ body {
   font-style: normal;
 }
 
+@media screen and (max-width: 767px) {
+  .main {
+    padding-top: 60px;
+  }
+}
+
 .link {
   transition-property: background-color, color, fill, box-shadow;
   transition-duration: 250ms;
@@ -87,16 +93,6 @@ link:hover {
   }
 }
 
-/*
-.container {
-  max-width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
- 
-}
-*/
 .flexx-conteiner {
   display: flex;
   align-items: center;
@@ -164,12 +160,19 @@ link:hover {
 
 .header {
   border-bottom: 1px solid #ececec;
-  min-height: 60px;
+  background-color: #fff;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  /*@media screen and (max-width: 480px) {
+    max-width: 480px;
+  }*/
 }
 
 @media screen and (max-width: 767px) {
-  .header .address {
-    display: none;
+  .header {
+    position: fixed;
+    top: 0;
   }
 }
 
@@ -193,8 +196,24 @@ link:hover {
   }
 }
 
+.header-logo {
+  display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+  .header-logo {
+    padding: 16px 0;
+  }
+}
+
 .header-logo-studio {
   color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .header-logo {
+    margin-right: 88px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -241,14 +260,13 @@ link:hover {
 }
 */
 .navigation {
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
   .navigation {
+    width: 100%;
     justify-content: space-between;
   }
 }
@@ -287,9 +305,12 @@ link:hover {
   background-color: #2196f3;
   border-radius: 2px;
   bottom: 0;
+  position: absolute;
+  z-index: 2;
 }
 
 .navigation-list-item:last-child {
+  margin-bottom: 0;
   margin-right: 0;
 }
 
@@ -300,7 +321,6 @@ link:hover {
   letter-spacing: 0.02em;
   color: #212121;
   display: inline-block;
-  padding-bottom: 12px;
   /*transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
@@ -319,6 +339,12 @@ link:hover {
 .navigation-link:hover,
 .navigation-link:focus {
   color: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .address {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -344,6 +370,7 @@ link:hover {
   .header-contact {
     margin-right: 30px;
     display: flex;
+    align-items: center;
   }
 }
 
@@ -358,12 +385,21 @@ link:hover {
   line-height: 1.167;
   letter-spacing: 0.02em;
   color: #757575;
-  display: flex;
-  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
   .contact-link {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.167;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-link {
+    display: flex;
+    align-items: center;
     font-size: 14px;
     line-height: 1.143;
   }
@@ -373,6 +409,34 @@ link:hover {
   margin-right: 10px;
   fill: currentColor;
   fill: #757575;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-link svg {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .envelope {
+    width: 14px;
+    height: 10px;
+  }
+  .smartphone {
+    width: 10px;
+    height: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .envelope {
+    width: 16px;
+    height: 12px;
+  }
+  .smartphone {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .contact-link:hover svg,
@@ -387,8 +451,45 @@ link:hover {
 
 .hero {
   background-color: #c4c4c4;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/studio/mobile/hero-bg-mobile@2x.jpg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/studio/mobile/hero-bg-mobile.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/studio/tablet/hero-bg-tablet@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/studio/tablet/hero-bg-tablet.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/studio/desktop/hero-bg-desktop@2x.jpg.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/studio/desktop/hero-bg-desktop.jpg);
+  }
 }
 
 .hero .main-title-box {
@@ -408,58 +509,6 @@ link:hover {
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/sudio/mobile/hero-bg-mobile@2x.jpg);
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/sudio/mobile/hero-bg-mobile.jpg);
-  }
-}
-
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px), screen and (min-resolution: 192dpi) and (max-width: 1199px), screen and (min-resolution: 2dppx) and (max-width: 1199px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/sudio/tablet/hero-bg-tablet@2x.jpg);
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/sudio/tablet/hero-bg-tablet.jpg);
-  }
-}
-
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/sudio/desktop/hero-bg-desktop@2x.jpg);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/sudio/desktop/hero-bg-desktop.jpg);
-  }
-}
-
-/*
-.hero {
-  background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/studio/hero-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  .main-title-box {
-    text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    max-width: 696px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-*/
 .order-btn {
   font-weight: 700;
   font-size: 16px;
@@ -496,15 +545,46 @@ link:hover {
   background-color: #188ce8;
 }
 
-.menu-buton {
-  padding: 0;
-  display: block;
+.menu-button {
+  height: 40px;
+  width: 40px;
   background-color: transparent;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* .icon-menu,
+  .icon-cross {
+    fill: #000000;
+  }*/
 }
 
-.menu-buton .svg {
-  fill: #000000;
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-button:hover .icon-menu,
+.menu-button:focus .icon-menu {
+  fill: #2196f3;
+}
+
+.menu-button:hover .icon-cross,
+.menu-button:focus .icon-cross {
+  fill: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }
 
 .advantages {
@@ -823,12 +903,6 @@ link:hover {
   fill: #2196f3;
 }
 
-@media screen and (min-width: 480px) {
-  .clients-link {
-    width: 210px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .clients-link {
     width: 226px;
@@ -942,11 +1016,12 @@ link:hover {
 }
 
 .footer-form-wrap {
-  width: 450px;
+  width: 100%;
 }
 
 @media screen and (max-width: 1199px) {
   .footer-form-wrap {
+    max-width: 450px;
     margin: 60px auto 0 auto;
   }
 }
@@ -1140,6 +1215,7 @@ link:hover {
 */
 .backdrop {
   position: fixed;
+  z-index: 20;
   top: 0;
   left: 0;
   width: 100%;
@@ -1168,28 +1244,34 @@ link:hover {
 
 .modal-window {
   position: absolute;
+  z-index: 25;
   /*top: 221px;*/
   top: 50%;
   left: 50%;
-  /*transform: translateX(-50%) scale(1);*/
-  transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  padding: 40px;
+  text-align: center;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  /*transform: translateX(-50%) scale(1);*/
+  transform: translate(-50%, -50%) scale(1);
   overflow: hidden;
   transition-delay: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  padding: 40px;
-  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-window .close-btn {
   position: absolute;
-  z-index: 3;
-  left: 490px;
+  z-index: 30;
+  left: 412px;
   top: 8px;
   width: 30px;
   height: 30px;
@@ -1204,6 +1286,12 @@ link:hover {
 .modal-window .close-btn:hover svg,
 .modal-window .close-btn:focus svg {
   fill: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-window .close-btn {
+    left: 490px;
+  }
 }
 
 .modal-window .modal-title {
@@ -1333,14 +1421,21 @@ link:hover {
 
 .checkbox-wrap .policy {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.67;
   letter-spacing: 0.03em;
   color: #757575;
   padding-left: 16px;
   position: relative;
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-wrap .policy {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox-wrap .checkbox:checked + .checkbox-modified {
@@ -1361,5 +1456,65 @@ link:hover {
 .checkbox-wrap .policy-link {
   color: #2196f3;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    padding: 60px 0;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    width: 100%;
+    height: 395px;
+    top: 100%;
+    right: 0%;
+    display: none;
+    z-index: 999;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-menu {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu.is-open {
+  display: block;
+}
+
+.mobile-navigation-list {
+  text-align: center;
+}
+
+.mobile-address {
+  margin-top: 60px;
+}
+
+.mobile-contact-list {
+  text-align: center;
+}
+
+.menu-underline {
+  position: relative;
+  padding-bottom: 12px;
+  color: #2196f3;
+}
+
+.menu-underline::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

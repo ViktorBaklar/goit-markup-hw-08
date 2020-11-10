@@ -83,8 +83,9 @@
   }
 
   &-form-wrap {
-    width: 450px;
+    width: 100%;
     @media screen and (max-width: 1199px) {
+      max-width: 450px;
       margin: 60px auto 0 auto;
     }
     @media screen and (min-width: 1200px) {

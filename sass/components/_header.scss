@@ -1,20 +1,14 @@
 .header {
   border-bottom: 1px solid #ececec;
-  min-height: 60px;
+  background-color: #fff;
   width: 100%;
   position: relative;
   z-index: 10;
   @media screen and (max-width: 767px) {
     position: fixed;
     top: 0;
-    padding: 16px 0;
   }
-  @media screen and (max-width: 480px) {
+  /*@media screen and (max-width: 480px) {
     max-width: 480px;
-  }
-  .address {
-    @media screen and (max-width: 767px) {
-      display: none;
-    }
-  }
+  }*/
 }

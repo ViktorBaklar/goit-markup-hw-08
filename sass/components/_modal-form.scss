@@ -118,8 +118,8 @@
 
   .policy {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.67;
     letter-spacing: 0.03em;
 
     color: $secondary-text-color;
@@ -129,6 +129,11 @@
     position: relative;
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 
   .checkbox:checked + .checkbox-modified {

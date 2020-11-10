@@ -38,11 +38,14 @@
   }
 }
 
-.menu-buton {
+.menu-button {
   height: 40px;
   width: 40px;
   background-color: transparent;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   /* .icon-menu,
   .icon-cross {
@@ -53,22 +56,22 @@
     display: none;
   }
 
-  &.is-open .icon-close {
+  &.is-open .icon-cross {
     display: block;
   }
 
-  &.is-open .iconmenu {
+  &.is-open .icon-menu {
     display: none;
   }
 
   &:hover .icon-menu,
   &:focus .icon-menu {
-    fill: $active-text-color;
+    fill: $active-color;
   }
 
   &:hover .icon-cross,
   &:focus .icon-cross {
-    fill: $active-text-color;
+    fill: $active-color;
   }
   @media screen and (min-width: 768px) {
     display: none;
