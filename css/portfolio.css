@@ -672,6 +672,10 @@ link:hover {
   overflow: hidden;
 }
 
+.gallery-list .overlay-box img {
+  width: 100%;
+}
+
 .gallery-list .overlay {
   position: absolute;
   top: 0;
